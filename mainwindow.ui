@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>669</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MRRC Motion Phantom Control</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>651</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QFrame" name="stepper1_frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>24</y>
+          <width>310</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>15</y>
+           <width>110</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Distance (mm)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>45</y>
+           <width>110</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Duration (s)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="step1_distance">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>11</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-500.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>500.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="step1_duration">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>41</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <double>60.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>10.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step1_queueBefore">
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>41</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Before &gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>261</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>93</y>
+           <width>110</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Loop Count       (0 = Inf)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="step1_loopCount">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>93</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step1_loopBefore">
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>123</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Before &gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step1_loopAfter">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>93</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Insert &gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step1_queueAfter">
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>11</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Insert &gt;&gt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QListWidget" name="step1_motionQueue">
+        <property name="geometry">
+         <rect>
+          <x>329</x>
+          <y>24</y>
+          <width>311</width>
+          <height>130</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step1_clearAll">
+        <property name="geometry">
+         <rect>
+          <x>423</x>
+          <y>160</y>
+          <width>70</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Clear All</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>7</y>
+          <width>191</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stepper 1 Motion Commands</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>7</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stepper 1 Motion Queue</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step1_moveDown">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>581</x>
+          <y>160</y>
+          <width>40</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string extracomment="Move selected item DOWN"/>
+        </property>
+        <property name="text">
+         <string>Down</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step1_moveUp">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>538</x>
+          <y>160</y>
+          <width>40</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string extracomment="Move selected item UP"/>
+        </property>
+        <property name="text">
+         <string>Up</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step1_clearSelected">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>160</y>
+          <width>70</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string extracomment="Delete selected item"/>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="stepper2_frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>24</y>
+          <width>310</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>15</y>
+           <width>110</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Distance (mm)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>45</y>
+           <width>110</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Duration (s)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="step2_distance">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>11</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-500.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>500.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="step2_duration">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>41</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <double>60.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>10.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step2_queueBefore">
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>41</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Before &gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_2">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>261</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>93</y>
+           <width>110</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Loop Count       (0 = Inf)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="step2_loopCount">
+         <property name="geometry">
+          <rect>
+           <x>126</x>
+           <y>93</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step2_loopBefore">
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>123</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Before &gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step2_loopAfter">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>93</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Insert &gt;&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="step2_queueAfter">
+         <property name="geometry">
+          <rect>
+           <x>214</x>
+           <y>11</y>
+           <width>80</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Insert &gt;&gt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="step2_moveDown">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>581</x>
+          <y>160</y>
+          <width>40</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string extracomment="Move selected item DOWN"/>
+        </property>
+        <property name="text">
+         <string>Down</string>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="step2_motionQueue">
+        <property name="geometry">
+         <rect>
+          <x>329</x>
+          <y>24</y>
+          <width>311</width>
+          <height>130</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step2_clearAll">
+        <property name="geometry">
+         <rect>
+          <x>423</x>
+          <y>160</y>
+          <width>70</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Clear All</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>7</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stepper 2 Motion Queue</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step2_clearSelected">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>160</y>
+          <width>70</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string extracomment="Delete selected item"/>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step2_moveUp">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>538</x>
+          <y>160</y>
+          <width>40</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string extracomment="Move selected item UP"/>
+        </property>
+        <property name="text">
+         <string>Up</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>7</y>
+          <width>191</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stepper 2 Motion Commands</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="command_frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPlainTextEdit" name="infoText">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>30</y>
+          <width>297</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step_execute">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>130</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Start Motion</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="step_stop">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>120</y>
+          <width>90</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>STOP!</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>672</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuConfigure">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="actionConfigure"/>
+   </widget>
+   <addaction name="menuConfigure"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionConfigure">
+   <property name="text">
+    <string>Configure</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
